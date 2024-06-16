@@ -6,6 +6,9 @@
             <div class="card-body">
               <h2>{{ product.name }}</h2>
               <p><strong>Price:</strong> {{ product.price }} $</p>
+              <p><strong>Seller:</strong> selleradresssxxxxxxxxxID</p>
+              <p><strong>Buyer:</strong> buyeradresssxxxxxxxxxID</p>
+
               <p>{{ product.description }}</p>
               <div class="d-flex align-items-center mt-4">
                 <button @click="likeProduct" class="btn btn-outline-primary">
@@ -18,7 +21,7 @@
         <div class="col-md-4">
           <div class="card mb-4">
             <div class="card-body">
-              <h4>Timeline de la Orden</h4>
+              <h4>Order Timeline</h4>
               <ul class="timeline">
                 <li v-for="(step, index) in orderSteps" :key="index" :class="{ 'timeline-inverted': index % 2 !== 0 }">
                   <div class="timeline-badge bg-primary"><i class="fas fa-check"></i></div>
@@ -50,9 +53,9 @@
       return {
         product: {
           id: 1,
-          name: 'Example Product',
-          description: 'Description of the example product.',
-          price: 50
+          name: 'Tommy Hilfiger Hoodie',
+          description: 'Tommy Hilfiger Hoodie.',
+          price: 90
         },
         likes: 0,
         orderSteps: [

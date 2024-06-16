@@ -43,7 +43,7 @@ const routes = [
   { path: '/', component: ProductList },
   { path: '/product', component: ProductList },
   { path: '/product/:id', component: ProductDetail, props: true },
-  { path: '/order/:id', component: OrderDetail, props: true },
+  { path: '/OrderDetail', component: OrderDetail, props: true },
   { path: '/UserCreatedList', component: UserCreatedList, props: true },
   { path: '/ListingCreatedList', component: ListingCreatedList, props: true },
   { path: '/ListingBoughtList', component: ListingBoughtList, props: true },

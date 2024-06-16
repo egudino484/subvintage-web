@@ -5,13 +5,11 @@
       <div v-else-if="error">{{ error.message }}</div>
       <div v-else>
         <div class="card" v-for="list in listings" :key="list.id">
-          <img :src="getImagePath(list.pictureUrl)" class="card-img-top" alt="Product Image">
           <div class="card-body">
             <h5 class="card-title">{{ list.title }}</h5>
             <p class="card-text">{{ list.description }}</p>
             <p class="card-text">Price: {{ list.price }} ETH</p>
             <p class="card-text">Owner: {{ list.owner }}</p>
-            <p class="card-text">ipfs link: {{ list.pictureUrl }}</p>
             <button class="btn btn-primary" @click="buyProduct(list.id, list.price)">Buy</button>
           </div>
         </div>
