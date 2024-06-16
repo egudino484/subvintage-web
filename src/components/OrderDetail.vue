@@ -28,13 +28,12 @@
                     </div>
                     <div class="timeline-body">
                       <p>{{ step.description }}</p>
-                      <!-- Botón para agregar datos si la bandera de datos es true -->
                       <button v-if="step.hasData" @click="addData(step)" class="btn btn-success btn-sm">
                         Add Data
                       </button>
                     </div>
                   </div>
-                  <hr class="my-4"> <!-- Separador entre etapas -->
+                  <hr class="my-4">
                 </li>
               </ul>
             </div>

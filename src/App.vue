@@ -27,7 +27,7 @@
 
     <footer class="text-center mt-4">
       <!-- Pie de página -->
-      <p>&copy; {{ new Date().getFullYear() }} SubVintage. Todos los derechos reservados.</p>
+      <p>&copy; {{ new Date().getFullYear() }} SubVintage. All rights reserved.</p>
     </footer>
   </div>
 </template>

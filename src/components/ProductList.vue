@@ -8,27 +8,26 @@
                 <button class="btn btn-outline-secondary" type="button" @click="clearSearch">Clean</button>
             </div>
         </div>
-
         <div class="row">
 
             <div class="row">
                 <div class="col-md-4 mb-4" v-for="product in products" :key="product.id">
                     <router-link :to="'/product/' + product.id" class=" routerLink card-link">
                         <div class="card">
-                            <img :src="product.image" class="card-img-top" alt="Producto">
+                            <img :src="getImagePath(product.image)" class="card-img-top fixed-size" alt="Producto">
                             <div class="card-body">
                                 <h5 class="card-title">{{ product.name }}</h5>
                                 <p class="card-text">{{ product.description }}</p>
                                 <p class="card-text"><strong>Precio:</strong> {{ product.price }} $</p>
                             </div>
                             <div class="d-flex justify-content-between align-items-center">
-                                    <button class="btn btn-outline-primary" @click="likeProduct(product.id)">
-                                        <i class="fa fa-heart"></i> Like <span class="badge badge-primary">{{ product.likes
-                                        }}</span>
-                                    </button>
-                                    <button class="btn btn-success" @click="buyProduct(product.id)">
-                                        <i class="fa fa-shopping-cart"></i> Comprar
-                                    </button>
+                                <button class="btn btn-outline-primary" @click="likeProduct(product.id)">
+                                    <i class="fa fa-heart"></i> Like <span class="badge badge-primary">{{ product.likes
+                                    }}</span>
+                                </button>
+                                <button class="btn btn-success" @click="buyProduct(product.id)">
+                                    <i class="fa fa-shopping-cart"></i> Buy
+                                </button>
                             </div>
                         </div>
                     </router-link>
@@ -47,36 +46,46 @@
 </template>
   
 <script>
+
 export default {
     data() {
         return {
             searchTerm: '',
             products: [
-                {
-                    id: 1,
-                    name: 'Nike Shoes',
-                    description: 'Descripción del Producto 1',
-                    price: 10,
-                    image: 'https://via.placeholder.com/200x150',
-                    likes: 0
-                },
-                {
-                    id: 2,
-                    name: 'Adidas Shoes',
-                    description: 'Descripción del Producto 2',
-                    price: 20,
-                    image: 'https://via.placeholder.com/200x150',
-                    likes: 0
-                },
-                {
-                    id: 3,
-                    name: 'Tommy Hoodie',
-                    description: 'Descripción del Producto 3',
-                    price: 30,
-                    image: 'https://via.placeholder.com/200x150',
-                    likes: 0
-                }
-            ]
+   
+    {
+      "id": 3,
+      "name": "Gucci GG Marmont Mini Bag",
+      "description": "Luxurious mini bag with a chevron pattern and GG logo.",
+      "price": 980,
+      "image": "gucci_gg_marmont_mini_bag.jpeg",
+      "likes": 0
+    },
+    {
+      "id": 4,
+      "name": "Tommy Hilfiger Hoodie",
+      "description": "Comfortable and stylish hoodie with Tommy Hilfiger branding.",
+      "price": 90,
+      "image": "tommy_hilfiger_hoodie.jpeg",
+      "likes": 0
+    },
+    {
+      "id": 1,
+      "name": "Nike Air Max 270",
+      "description": "High-performance lifestyle shoes with 270 degrees of visibility in the air unit.",
+      "price": 160,
+      "image": "nike_air_max_270.jpeg",
+      "likes": 0
+    },
+    {
+      "id": 2,
+      "name": "Adidas Ultraboost 21",
+      "description": "Premium running shoes with responsive Boost cushioning.",
+      "price": 180,
+      "image": "adidas_ultraboost_21.jpeg",
+      "likes": 0
+    }
+  ]
         };
     },
     computed: {
@@ -104,12 +113,20 @@ export default {
         },
         clearSearch() {
             this.searchTerm = '';
+        },
+        getImagePath(image) {
+            return require(`@/assets/images/${image}`);
         }
+
     }
 };
 </script>
   
 <style>
-/* Estilos adicionales según necesidades */
+.fixed-size {
+  width: 200px;
+  height: 200px;
+  object-fit: cover; /* Optional: ensures the image covers the container */
+}
 </style>
   
