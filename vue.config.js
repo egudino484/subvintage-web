@@ -10,6 +10,6 @@ module.exports = defineConfig({
       },
     },
   },
-  base: "https://egudino484.github.io/subvintage-web/",
+  //base: "https://egudino484.github.io/subvintage-web/",
 
 });
