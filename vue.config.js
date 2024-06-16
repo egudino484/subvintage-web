@@ -10,6 +10,6 @@ module.exports = defineConfig({
       },
     },
   },
-  publicPath: process.env.NODE_ENV === "production" ? "/REPO_NAME/" : "/",
+  base: "https://egudino484.github.io/subvintage-web/",
 
 });
