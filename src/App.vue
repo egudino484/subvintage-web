@@ -13,6 +13,13 @@
               <li class="nav-item">
                 <router-link to="/" class="nav-link">Inicio</router-link>
               </li>
+              <li class="nav-item">  <router-link to="/ProductDetail" class="nav-link">ProductDetail</router-link> </li>
+                <li class="nav-item">  <router-link to="/OrderDetail" class="nav-link">OrderDetail</router-link> </li>
+                  <li class="nav-item">  <router-link to="/UserCreatedList" class="nav-link">UserCreatedList</router-link> </li>
+                    <li class="nav-item">  <router-link to="/ListingCreatedList" class="nav-link">ListingCreatedList</router-link> </li>
+                      <li class="nav-item">  <router-link to="/CreateUser" class="nav-link">CreateUser</router-link> </li>
+                        <li class="nav-item">  <router-link to="/MarketPlace" class="nav-link">MarketPlace</router-link> </li>
+                          <li class="nav-item">  <router-link to="/CreateListing" class="nav-link">CreateListing</router-link> </li>
               <!-- Otras rutas si es necesario -->
             </ul>
           </div>

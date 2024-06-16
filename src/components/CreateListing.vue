@@ -76,7 +76,7 @@
         }
   
         // Initialize contract
-        const contractAddress = '0xa68ec9C82e98011aD043E4cece96AB49Ba345A82';
+        const contractAddress = '0xFaE26507C28b99E466f27e34DE5c6413114f2c2b';
         this.contract = new this.web3.eth.Contract(MarketplaceABI, contractAddress);
       } catch (error) {
         this.error = error;

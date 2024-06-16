@@ -1,8 +1,9 @@
 // src/graphql.js
 import { request, gql } from 'graphql-request';
 
-const endpoint = 'https://api.studio.thegraph.com/query/71573/subvintage/version/latest';
+//const endpoint = 'https://api.studio.thegraph.com/query/71573/subvintage/version/latest';
 
+const endpoint = 'https://api.studio.thegraph.com/query/71573/subvinted3/0.01';
 const userCreatedQuery = gql`
   {
     userCreateds(first: 5) {

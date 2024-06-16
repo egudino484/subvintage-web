@@ -23,7 +23,7 @@
       async handleSubmit() {
         try {
           const web3 = this.$web3; // Acceder a la instancia de Web3.js desde Vue prototype
-          const contractAddress = '0x49e909B90FBbf4f1852b9384E3c3801331aC160E' // Dirección del contrato en la red Ethereum
+          const contractAddress = '0x7DE773f32D6444704dE78C379F0bC7059ba02B47' // Dirección del contrato en la red Ethereum
           const contract = new web3.eth.Contract(userManagementABI, contractAddress);
   
           // Obtener la cuenta actual conectada en MetaMask
